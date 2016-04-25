@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Facture Masher
 Création de facture multiplateforme. 
 
