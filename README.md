@@ -20,4 +20,3 @@ Je ne suis pas fan des feuilles excel et des solutions actuels pour générer de
 **Paramètre de l'application**
 
     * Téléchargement de fichier image pour fond de la facture.
-
