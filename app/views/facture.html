@@ -1,0 +1,107 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Facture Masher - Création nouvelle facture</title>
+
+  <link href="../font/stylesheet.css" rel="stylesheet" type="text/css">
+  <link href="../stylesheets/main.css" rel="stylesheet" type="text/css">
+
+  <script src="../helpers/context_menu.js"></script>
+  <script src="../helpers/external_links.js"></script>
+
+  <script src="../controllers/facture_ctrl.js"></script>
+</head>
+<body>
+
+  <div class="container">
+    <h1 class="page-title">Création nouvelle facture</h1>
+    <div class="facture" id="js-facture">
+      <header>
+        <div class="flex-container">
+          <div class="facture-emitter">
+            <p class="facture-header-field">Luke Skywalker</p>
+            <p class="facture-header-field">N° SIREN : 066642</p>
+            <p class="facture-header-field">12 street of Tatooine</p>
+            <p class="facture-header-field">93666 Tatooine Center</p>
+          </div>
+          <div class="facture-client">
+            <p class="facture-header-field">Empire</p>
+            <p class="facture-header-field">Deathstar space station</p>
+            <p class="facture-header-field">95007 The Omniverse</p>
+          </div>
+        </div>
+        <div class="facture-disclaimer">
+          <p class="facture-disclaimer__text-wrap">Une note ou ce que vous vouler içi.</p>
+        </div>
+        <div class="facture-date">
+          <p class="facture-date__text"><span class="facture-date__text--bold">Date : </span>27/04/2016</p>
+        </div>
+        <div class="facture-number">
+          <p class="facture-number__text"><span class="facture-number__text--bold">Identifiant facture : </span><span class="facture-number__prefix">LS-</span>18</p>
+        </div>
+      </header>
+      <main>
+        <table class="facture-data">
+          <thead>
+            <tr>
+              <th class="facture-data__colwidth-designation">Désignation</th>
+              <th class="facture-data__colwidth-quantity">Qté</th>
+              <th class="facture-data__colwidth-fixed-unit-price">PU HT</th>
+              <th class="facture-data__colwidth-total-unit-price">TOTAL HT</th>
+            </tr>
+          </thead>
+          <tbody>
+           <tr>
+             <td class="facture-data__cell-designation">Mon premier produit</td>
+             <td class="facture-data__cell-quantity">1</td>
+             <td class="facture-data__cell-fixed-unit-price">42€</td>
+             <td class="facture-data__cell-total-unit-price">42€</td>
+           </tr>
+           <tr>
+             <td class="facture-data__cell-designation" >Ma préstation</td>
+             <td class="facture-data__cell-quantity">1</td>
+             <td class="facture-data__cell-fixed-unit-price">300€</td>
+             <td class="facture-data__cell-total-unit-price">300€</td>
+           </tr>
+           <tr>
+             <td class="facture-data__cell-designation" >Mon deuxième produit</td>
+             <td class="facture-data__cell-quantity">2</td>
+             <td class="facture-data__cell-fixed-unit-price">20€</td>
+             <td class="facture-data__cell-total-unit-price">40€</td>
+           </tr>
+           <tr class="facture-data__spacer">
+             <td></td>
+             <td></td>
+             <td></td>
+             <td></td>
+           </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td></td>
+              <td></td>
+              <td class="facture-data__total-text">Total</td>
+              <td class="facture-data__total-price">380€</td>
+            </tr>
+          </tfoot>
+        </table>
+      </main>
+      <footer>
+        <div class="facture-disclaimer">
+          <p class="facture-disclaimer__text facture-disclaimer__text--bold facture-disclaimer__text--right">Une autre note à propos de la facture en gras.</p>
+        </div>
+        <div class="facture-disclaimer">
+          <p class="facture-disclaimer__text">Date limite de règlement : 27/04/2666</p>
+          <p class="facture-disclaimer__text">Taux des pénalités de retard: 42%</p>
+        </div>
+
+      </footer>
+    </div>
+    <div class="save-pdf">
+      <button class="save-pdf__button" id="js-saveToPDF">Enregistrer en PDF</button>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,28 +1,196 @@
-
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
 
 html, body {
-    width: 100%;
-    height: 100%;
-    margin: 0;
-    padding: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: sans-serif;
-    background-color: #333;
-    color: #fafafa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+  background-color: #fff;
+  color: #fafafa;
+  font-size: 14px;
+  font-family: 'liberation_sansregular';
 }
 
 a {
-    text-decoration: none;
-    color: lightblue;
+  text-decoration: none;
+  color: lightblue;
 }
 
-.container {
-    text-align: center;
+table {
+  width: 100%;
+  max-width: 100%;
+  table-layout: fixed;
+  border-collapse: collapse;
+  vertical-align: top;
+}
+
+thead {
+  background-color: #d8e4e8;
+}
+
+td,
+th {
+  vertical-align: top;
+  min-width: 2rem;
+  cursor: default;
+}
+
+th {
+  vertical-align: middle;
+}
+
+/*
+  HELPERS
+*/
+
+.flex-container {
+  display: flex;
+  justify-content: space-between;
+}
+.page-title {
+  visibility: hidden;
+}
+.facture {
+  width: 100%;
+  position: relative;
+  overflow: auto;
+  background-color: #fff;
+  // padding-top: 50px;
+  // padding-left: 50px;
+  // padding-right: 50px;
+  color: #000;
+}
+
+.facture-client {
+  // position: absolute;
+  // top: 50px;
+  // right: 200px;
+}
+
+.facture-header-field {
+  margin: 2px 0;
+  font-size: 16px;
+  font-family: 'liberation_sansbold';
+}
+
+.facture-disclaimer {
+  font-size: 14px;
+}
+
+.facture-disclaimer__text-wrap {
+  width: 50%;
+}
+
+.facture-disclaimer__text-full {
+  width: 100%;
+}
+
+.facture-disclaimer__text--right {
+  text-align: right;
+}
+
+.facture-disclaimer__text--bold {
+  font-family: 'liberation_sansbold';
+}
+
+.facture-date, .facture-number {
+  margin-left: 50px;
+}
+
+.facture-date__text, .facture-number__text {
+  margin: 5px 0;
+}
+
+.facture-date {
+  margin-top: 30px;
+}
+
+.facture-number {
+  margin-bottom: 30px;
+}
+
+.facture {
+  min-height: 700px;
+}
+
+.facture-data__spacer {
+  height: 200px;
+}
+
+.facture-data thead {
+  line-height: 2em;
+}
+
+.facture-data th {
+  border: 2px solid #000;
+}
+
+.facture-data__colwidth-designation {
+  width: 60%;
+}
+
+.facture-data tbody td {
+  padding: 3px 5px;
+  border-right: 2px solid #000;
+  border-left: 2px solid #000;
+}
+
+.facture-data__cell-designation {
+  text-align: left;
+}
+
+.facture-data__cell-quantity, .facture-data__cell-fixed-unit-price, .facture-data__cell-total-unit-price {
+  text-align: right;
 }
 
 
+.facture-data tfoot td {
+  border-top: 2px solid #000;
+}
+
+.facture-data__total-text, .facture-data__total-price {
+  padding: 3px 5px;
+  text-align: right;
+}
+
+.facture-data__total-text {
+  text-transform: uppercase;
+  font-family: 'liberation_sansbold';
+}
+.facture-data__total-price {
+  border: 2px solid #000;
+}
+
+.facture-date__text--bold, .facture-number__text--bold {
+  font-family: 'liberation_sansbold';
+}
+
+.save-pdf {
+  margin: 18px 0;
+}
+
+.save-pdf__button {
+  visibility: hidden;
+  padding: 15px 25px;
+  background: linear-gradient(to bottom, #aaa 0%,#666 100%);
+  border: 2px solid #fff;
+  border-radius: 5px;
+  color: #fff;
+}
+
+.save-pdf__button:hover {
+  background: linear-gradient(to bottom, #666 0%,#aaa 100%);
+}

@@ -12,8 +12,6 @@ import createWindow from './helpers/window'
 // in config/env_xxx.json file.
 import env from './env'
 
-var mainWindow
-
 var setApplicationMenu = function () {
   var menus = [editMenuTemplate]
   if (env.name !== 'production') {
@@ -21,6 +19,8 @@ var setApplicationMenu = function () {
   }
   Menu.setApplicationMenu(Menu.buildFromTemplate(menus))
 }
+
+var mainWindow
 
 app.on('ready', function () {
   setApplicationMenu()
@@ -30,7 +30,7 @@ app.on('ready', function () {
     height: 600
   })
 
-  mainWindow.loadURL('file://' + __dirname + '/app.html')
+  mainWindow.loadURL('file://' + __dirname + '/views/index.html')
 
   if (env.name !== 'production') {
     mainWindow.openDevTools()
