@@ -9,7 +9,7 @@ npm i
 ```
 ## Utilisation
 ```
-npm start
+npm start ou gulp start
 ```
 ## Build
 Compile des builds pour les 3 os majeurs linux, mac & windows.
