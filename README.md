@@ -12,7 +12,10 @@ npm i
 npm start
 ```
 ## Build
-Compile des builds pour les 3 os majeurs linuxn, mac & windows.
+Compile des builds pour les 3 os majeurs linux, mac & windows.
+```
+npm build
+```
 ## Roadmap
 
 **Landing Page**
