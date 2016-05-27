@@ -8,11 +8,13 @@ Je ne suis pas fan des feuilles excel et des solutions actuels pour générer de
 npm i
 ```
 ## Utilisation
+Pour générer une facture avec vos paramètres personnalisé veuillez éditer le fichier **app/views/facture.html**. Démarrez ensuite l'application.
 ```
 npm start ou gulp start
 ```
+Cliquez sur **Création nouvelles factures**. Retrouver ensuite votre facture dans le dossier build/facture.pdf
 ## Build
-Compile des builds pour les 3 os majeurs linux, mac & windows.
+Compile des builds pour les 3 os majeurs linux, mac & windows (non testé).
 ```
 npm build
 ```
