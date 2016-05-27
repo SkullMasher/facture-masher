@@ -3,6 +3,16 @@ Création de facture multiplateforme.
 
 Je ne suis pas fan des feuilles excel et des solutions actuels pour générer des factures. Voiçi **Facture Masher** une application libre et open source qui créer des factures sur n'importe quelle plateforme (Linux, Mac, Windows).
 
+## Instalation
+```
+npm i
+```
+## Utilisation
+```
+npm start
+```
+## Build
+Compile des builds pour les 3 os majeurs linuxn, mac & windows.
 ## Roadmap
 
 **Landing Page**
